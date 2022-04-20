@@ -27,10 +27,10 @@ for(let i = 0; i < numArray.length; i++){
     document.getElementById('random-num').innerHTML += `${numArray[i]} \xa0`;
 }
 
-const userNums = setTimeout(myFunction, 1500);
+const userNums = setTimeout(checkedNum, 1500);
 
 
-function myFunction() {
+function checkedNum() {
     document.getElementById('random-num').classList.add('d-none');
     const userArray = [];
     let myFlag = 0;
@@ -42,6 +42,7 @@ function myFunction() {
     for(let y = 0; y < numArray.length; y++){
         if (numArray.includes(userArray[y])){
             myFlag++;
+            document.getElementById('my-number').innerHTML += `${userArray[y]} \xa0`
         }
     }
     console.log(myFlag);
